@@ -1,20 +1,24 @@
-def maxArea(height):
-    left, right = 0, len(height) - 1
-    max_area = 0
-    
-    while left < right:
-        # Calculate the area with the current pointers
-        width = right - left
-        container_height = min(height[left], height[right])
-        area = width * container_height
-        
-        # Update max_area if the current area is greater
-        max_area = max(max_area, area)
-        
-        # Move the pointer pointing to the shorter line
-        if height[left] < height[right]:
-            left += 1
-        else:
-            right -= 1
-    
-    return max_area
+function maxArea(height) {
+  let left = 0;
+  let right = height.length - 1;
+  let maxArea = 0;
+
+  while (left < right) {
+    // Calculate the width and the minimum height
+    const width = right - left;
+    const containerHeight = Math.min(height[left], height[right]);
+
+    // Calculate the area and update maxArea if it's greater
+    const area = width * containerHeight;
+    maxArea = Math.max(maxArea, area);
+
+    // Move the pointer for the shorter line to try to find a larger area
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return maxArea;
+}
