@@ -18,3 +18,9 @@ var nextPermutation = function (nums) {
     right--;
   }
 };
+
+let i = 0;
+function plus() {
+  let i = 2;
+  return i + 1;
+}
