@@ -18,5 +18,6 @@ var findWords = function (words) {
 
   return resultArr;
 };
+
 const result = findWords(["Hello", "Alaska", "Dad", "Peace"]);
 console.log(result);
