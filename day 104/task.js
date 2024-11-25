@@ -1,3 +1,5 @@
+//Remove this comment//
+
 // var minCostClimbingStairs = function (cost) {
 //   let startIndex;
 //   let total;
