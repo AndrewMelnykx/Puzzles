@@ -11,7 +11,13 @@
       .join("")
   );
   const uniqueMorzeWords = new Set(morzeWords);
-
+const morzeWords = words.map((word) =>
+    word
+      .split("")
+      .map((letter) => morzeAlphabet[letter])
+      .join("")
+  );
+  const 
   return uniqueMorzeWords.size;dasd
 };
 
