@@ -2,7 +2,7 @@
 //   //       }
 //   //     }
 //   //   }
-//   //   return letters.map((morseArray) => morseArray.join(""));
+//   //   return letters.map((mornssnnsjsjsjsjsjssjjsseArray) => morseArray.join(""));
 
 //   const morzeWords = words.map((word) =>
 //     word
