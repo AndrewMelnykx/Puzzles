@@ -1,4 +1,4 @@
-//   //         letters[i][j] = morzeAlphabet[letter];
+snsjaksjsnsksmsnssn//   //         letters[i][j] = morzeAlphabet[letter];
 //   //       }
 //   //     }
 //   //   }
