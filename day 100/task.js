@@ -1,4 +1,4 @@
-var maximumProduct = function (nums) {
+var var maximumProduct = function (nums) {
   nums.sort((a, b) => a - b);
   const n = nums.length;
   return Math.max(
