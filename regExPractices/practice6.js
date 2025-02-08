@@ -26,4 +26,10 @@ const regExp = /^(http(s?):\/\/[a-z0-9_.]+\.[a-z]{2,12}$)/;
 // lfag i - ignore capital letter
 //flag g - global search
 
+//?!  - exclude pattern
+// /\bworld\/ - take only holistic word (worldwide) doesn`t print
+// \W - symbols
+// \S -  non-space(symbols numbers, letters)
+// /w* - Letters (uppercase A-Z and lowercase a-z)
+
 console.log(link.match(regExp));
