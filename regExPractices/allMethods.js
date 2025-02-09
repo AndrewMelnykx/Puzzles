@@ -31,5 +31,15 @@ const regExp = /^(http(s?):\/\/[a-z0-9_.]+\.[a-z]{2,12}$)/;
 // \W - symbols
 // \S -  non-space(symbols numbers, letters)
 // /w* - Letters (uppercase A-Z and lowercase a-z)
+//u is used to specify Unicode characters
+// s – DotAll mode (makes . match newlines too).
+// y – Sticky search (matches only from lastIndex, does not search ahead).
+// d – Returns detailed match information, including indices.
+// \t – Matches a tab character.
+// \r – Matches a carriage return.
+// \n – Matches a newline.
+// \v – Matches a vertical tab.
+// \0 – Matches a null character (\x00)
+// \B - matches not a word boundary
 
 console.log(link.match(regExp));
