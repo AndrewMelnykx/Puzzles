@@ -37,27 +37,46 @@
 // const regex6 = /\s\d+([a-zA-Z\s]+),\s([A-Za-z0-9\s]+),\s([a-zA-Z\s]+)/g;
 // console.log(text6.match(regex6));
 
+// const text =
+//   "[2024-02-11 14:32:10] [INFO] User: johndoe123 IP: 192.168.1.25 - Action: LOGIN_SUCCESS";
+// const dataRegex = /(\d{4}-\d{2}-\d{2})\s(\d{2}:\d{2}:\d{2})/;
+// const data = text.match(dataRegex)[0];
+
+// const levelRegex = /\[(INFO|WARNING|ERROR)\](?=\sUser)/;
+// const level = text.match(levelRegex)[1];
+
+// const userRegex = /User\:\s([a-z0-9]+)/;
+// const user = text.match(userRegex)[1];
+
+// const ipRegex = /\d{3}\.\d{3}\.\d{1}\.\d{2}/;
+// const ip = text.match(ipRegex)[0];
+
+// const actionRegex = /Action:\s([a-zA-Z_]+)/;
+// const action = text.match(actionRegex)[1];
+
+// const wholeInfo = {
+//   timestamp: data,
+//   level: level,
+//   user: user,
+//   ip: ip,
+//   action: action,
+// };
+
+//TO DO OOOOOOOOOOOOOOOO
+
+// const text =
+//   "[#2025&-07@-19! 08&:45*:22?] [ERROR#]  U$ser#: A!l#i&c*e_W23@ (ID@: 84!92) - Failed?* t&o a%ccess: /sec@ure/d*a!ta.html from [IP]: 172@.16!.254.1# - Status#= [403@: Forb@idden]";
+
+// const dataRegex =
+//   /\[\D*(\d{4})\D+(\d{2})\D+(\d{2})\D+(\d{2})\D+(\d{2})\D+(\d{2})\D*\]/;
+
+// console.log(text.match(dataRegex));
+
 const text =
-  "[2024-02-11 14:32:10] [INFO] User: johndoe123 IP: 192.168.1.25 - Action: LOGIN_SUCCESS";
-const dataRegex = /(\d{4}-\d{2}-\d{2})\s(\d{2}:\d{2}:\d{2})/;
-const data = text.match(dataRegex)[0];
+  "Contact: <Nick>CoolDude99</Nick> | Email: cool99.dude@mail-server.io | Phone: (123)-456-7890!!";
 
-const levelRegex = /\[(INFO|WARNING|ERROR)\](?=\sUser)/;
-const level = text.match(levelRegex)[1];
-
-const userRegex = /User\:\s([a-z0-9]+)/;
-const user = text.match(userRegex)[1];
-
-const ipRegex = /\d{3}\.\d{3}\.\d{1}\.\d{2}/;
-const ip = text.match(ipRegex)[0];
-
-const actionRegex = /Action:\s([a-zA-Z_]+)/;
-const action = text.match(actionRegex)[1];
-
-const wholeInfo = {
-  timestamp: data,
-  level: level,
-  user: user,
-  ip: ip,
-  action: action,
-};
+const nickNameReg = /(?<=<)([a-zA-Z-_]+)/g;
+const emailRegex = /[a-zA-Z0-9]+\.[a-z]+@[a-z-]+\.[a-z]{2}/;
+const phoneRegex = /\(?\d{3}\)?-\d{3}-\d{4}/;
+const phoneExpandedRegex = //
+  console.log(text.match(phoneRegex));
