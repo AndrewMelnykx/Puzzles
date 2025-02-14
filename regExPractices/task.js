@@ -25,7 +25,7 @@
 // console.log(text.match(regex));
 
 const billData = `
-Company Name: ABC Energy Services
+Company Name: ABC Energy Services 
 Account Holder: John Doe
 Account Number: A12345B6789
 Billing Period: 2025-01-01 to 2025-01-31
@@ -44,14 +44,12 @@ Payment Status: UNPAID
 Contact Number: 1-800-123-4567
 `;
 
-const regexName =
-  /(Company Name:\s[^\n\r]+|Account Number:\s[A-Z]\d{4}[A-Z]\d{4})/g;
-
-const regexName1 =
-  /(Company Name:\s[^\n\r]+|Account Number:\s[A-Z]\d{5}[A-Z]\d{4})/g;
-
 const regexNameSol =
-  /(Company Name:\s[^\n\r]+\|Account Number:\s[A-Z]\d{5}[A-Z]\d}{4})/g;
-const matches = [...billData.matchAll(regexName)].map((match) => match[0]);
+  /(Company Name:\s[^\n\r]+|Account Number:\s[A-Z]\d{5}[A-Z]\d{4}|Billing Period:\s\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])+)/g;
+
+const matches = [...billData.matchAll(regexNameSol)].map((match) => match[0]);
+
+const newRegex =
+  /(Company Name:\s[^\n\r]+|Account Number:\s[A-Z]\d{5}[A-Z]\d{4})+)/g;
 
 console.log(matches);
