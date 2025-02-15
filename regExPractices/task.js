@@ -44,12 +44,31 @@ Payment Status: UNPAID
 Contact Number: 1-800-123-4567
 `;
 
-const regexNameSol =
-  /(Company Name:\s[^\n\r]+|Account Number:\s[A-Z]\d{5}[A-Z]\d{4}|Billing Period:\s\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])+)/g;
+const datePattern = `([1-2](9|0)[0-9]{2})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])`;
+const nameAndSurnamePattern = `([A-Z][a-z]{1,6})`;
+const metersPattern = `([1-9][0-9]{4}\\s?[a-z][A-Z][a-z])`;
+
+const regexNameSol = new RegExp(
+  `(Company Name:\\s[^\\n\\r]+|Account Number:\\s[A-Z]\\d{5}[A-Z]\\d{4}|Billing Period:\\s${datePattern}\\s?to\\s?${datePattern}|Account Holder:\\s?${nameAndSurnamePattern}\\s${nameAndSurnamePattern})
+  |Meter Reading \\(Start\\):\\s?${metersPattern}|Meter Reading \\(End\\):\\s?${metersPattern}`,
+  "g"
+);
 
 const matches = [...billData.matchAll(regexNameSol)].map((match) => match[0]);
 
-const newRegex =
-  /(Company Name:\s[^\n\r]+|Account Number:\s[A-Z]\d{5}[A-Z]\d{4})+)/g;
-
 console.log(matches);
+
+// const chargeItemPattern = /^\s*([A-Za-z\s]+):\s?\$([0-9,.-]+)\s*$/gm;
+
+const chargeItemPattern =
+  /^\s*?([A-Z][a-z]+)\s?([A-Z][a-z]+)?:\s*\-?\$([0-9.]+[0-9]{2})/gm;
+
+const chargesMatch = [...billData.match(chargeItemPattern)];
+
+const chargesItems = chargesMatch.map((match) => ({
+  category1: match[1],
+  category2: match[2] || "",
+  amount: match[3],
+}));
+
+console.log(chargesItems);
