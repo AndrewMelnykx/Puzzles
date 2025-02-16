@@ -25,10 +25,10 @@
 // console.log(text.match(regex));
 
 const billData = `
-Company Name: ABC Energy Services 
+Company Name: ABC Energy Services
 Account Holder: John Doe
 Account Number: A12345B6789
-Billing Period: 2025-01-01 to 2025-01-31
+Billing Period: 2025 01.01 to 2025/01-31
 Meter Reading (Start): 25000 kWh
 Meter Reading (End): 25500 kWh
 Usage: 500 kWh
@@ -44,13 +44,14 @@ Payment Status: UNPAID
 Contact Number: 1-800-123-4567
 `;
 
-const datePattern = `([1-2](9|0)[0-9]{2})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])`;
+const datePattern = `([1-2](9|0)[0-9]{2})([-/\\.\\s\])?(0[1-9]|1[0-2])([-/\\.\\s\])?(0[1-9]|[12][0-9]|3[01])`;
 const nameAndSurnamePattern = `([A-Z][a-z]{1,6})`;
 const metersPattern = `([1-9][0-9]{4}\\s?[a-z][A-Z][a-z])`;
+const statusPattern = `PAYED|UNPAID|DELAYED|CANCELLED`;
+const numberPattern = `\\+?([0-9-\\s]+)([0-9-()]+)\\s?([0-9]+)`;
 
 const regexNameSol = new RegExp(
-  `(Company Name:\\s[^\\n\\r]+|Account Number:\\s[A-Z]\\d{5}[A-Z]\\d{4}|Billing Period:\\s${datePattern}\\s?to\\s?${datePattern}|Account Holder:\\s?${nameAndSurnamePattern}\\s${nameAndSurnamePattern})
-  |Meter Reading \\(Start\\):\\s?${metersPattern}|Meter Reading \\(End\\):\\s?${metersPattern}`,
+  `(Company Name:\\s[^\\n\\r]+|Account Number:\\s[A-Z]\\d{5}[A-Z]\\d{4}|Billing Period:\\s${datePattern}\\s?to\\s?${datePattern}|Account Holder:\\s?${nameAndSurnamePattern}\\s${nameAndSurnamePattern})|Meter Reading \\(Start\\):\\s?${metersPattern}|Meter Reading \\(End\\):\\s?${metersPattern}|Total Amount Due:\\s(\\$[0-9]+)\.[0-9]{2}|Due Date:\\s${datePattern}|Payment Status:\\s?(${statusPattern})|Contact Number:\\s${numberPattern}`,
   "g"
 );
 
@@ -58,17 +59,17 @@ const matches = [...billData.matchAll(regexNameSol)].map((match) => match[0]);
 
 console.log(matches);
 
-// const chargeItemPattern = /^\s*([A-Za-z\s]+):\s?\$([0-9,.-]+)\s*$/gm;
+// // const chargeItemPattern = /^\s*([A-Za-z\s]+):\s?\$([0-9,.-]+)\s*$/gm;
 
-const chargeItemPattern =
-  /^\s*?([A-Z][a-z]+)\s?([A-Z][a-z]+)?:\s*\-?\$([0-9.]+[0-9]{2})/gm;
+// const chargeItemPattern =
+//   /^\s*?([A-Z][a-z]+)\s?([A-Z][a-z]+)?:\s*\-?\$([0-9.]+[0-9]{2})/gm;
 
-const chargesMatch = [...billData.match(chargeItemPattern)];
+// const chargesMatch = [...billData.match(chargeItemPattern)];
 
-const chargesItems = chargesMatch.map((match) => ({
-  category1: match[1],
-  category2: match[2] || "",
-  amount: match[3],
-}));
+// const chargesItems = chargesMatch.map((match) => ({
+//   category1: match[1],
+//   category2: match[2] || "",
+//   amount: match[3],
+// }));
 
-console.log(chargesItems);
+// console.log(chargesItems);
