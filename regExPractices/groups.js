@@ -23,7 +23,7 @@
 
 // console.log(pattern.test(text));
 
-const text = "word1 word1";
+// const text = "word1 word1";
 
-const pattern = /(?<word>\w+)\s+\k<word>/;
-console.log(pattern.test(text));
+// const pattern = /(?<word>\w+)\s+\k<word>/;
+// console.log(pattern.test(text));
