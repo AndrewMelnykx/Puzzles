@@ -1,14 +1,24 @@
-var missingNumber = function (nums) {
-  const rightArr = [];
-  for (let i = 0; i < nums.length + 1; i++) {
-    rightArr.push(i);
+function maxArea(height) {
+  let left = 0;
+  let right = height.length - 1;
+  let maxArea = 0;
+
+  while (left < right) {
+    // Calculate the width and the minimum height
+    const width = right - left;
+    const containerHeight = Math.min(height[left], height[right]);
+
+    // Calculate the area and update maxArea if it's greater
+    const area = width * containerHeight;
+    maxArea = Math.max(maxArea, area);
+
+    // Move the pointer for the shorter line to try to find a larger area
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
   }
 
-  const sumOfRight = rightArr.reduce((t, n) => t + n, 0);
-  const sumOfBasicNums = nums.reduce((t, n) => t + n, 0);
-  const needableNum = sumOfRight - sumOfBasicNums;
-
-  return needableNum;
-};
-const result = missingNumber([3, 0, 1]);
-console.log(result);
+  return maxArea;
+}
