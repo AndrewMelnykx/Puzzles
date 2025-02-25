@@ -43,3 +43,4 @@ const regExp = /^(http(s?):\/\/[a-z0-9_.]+\.[a-z]{2,12}$)/;
 // \B - matches not a word boundary
 
 console.log(link.match(regExp));
+w;
