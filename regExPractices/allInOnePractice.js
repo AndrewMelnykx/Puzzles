@@ -23,7 +23,7 @@ const data = `<!DOCTYPE html>
 </body>
 </html>`;
 
-// Correct IP regex string for IPv4
+// Correct IP regex string for IPv4f
 const ipRegex =
   "\\b((25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\b";
 
