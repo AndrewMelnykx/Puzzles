@@ -5,7 +5,7 @@ let arr = [
 ];
 
 const flattenArr = arr.reduce(
-  (previousValue, currentValue) => previousValue.concat(currentValue),
+  (previousValue, newValue) => previousValue.concat(newValue),
   []
 );
 console.log(flattenArr);
