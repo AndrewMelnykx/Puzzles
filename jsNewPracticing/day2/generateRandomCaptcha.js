@@ -14,12 +14,13 @@ function generateRandom() {
   const chars = "123456789abcdefghijklmnopqrstuvwxvz";
   let strLength = 7;
   let result = "";
-  for (i = 0; i < strLength; i++) {
+  for (let i = 0; i < strLength; i++) {
     let randNum = Math.floor(Math.random() * chars.length);
     result += chars.substring(randNum, randNum + 1);
   }
   return result;
 }
+
 const result = generateRandom();
 
 console.log(result);

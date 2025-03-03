@@ -18,4 +18,6 @@
 const strFrom = Array.from("12345");
 const arrInArr = Array.from([1, 2, 3], (x) => x + x);
 
-console.log(arrInArr);
+const newArrayFromWithArgument = Array.from([1, 2, 3], (x) => x * 2);
+
+console.log(newArrayFromWithArgument);

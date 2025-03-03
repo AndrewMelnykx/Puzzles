@@ -20,3 +20,15 @@ console.log(placeDetails + "&" + departmentDetails + "&" + standard);
 // (b) India & English & 100
 // (a) undefined & undefined & undefined
 // (d) Reference Error
+
+// const arr = [1, 2];
+// [a, b] = arr;
+
+// console.log(a);
+
+const obj = { a: 1, b: 2 };
+
+let { a: newValueForA, b: newValueForB } = obj;
+
+console.log(newValueForA);
+console.log(newValueForB);
