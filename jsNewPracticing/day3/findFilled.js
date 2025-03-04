@@ -3,5 +3,4 @@
 // console.log(arr);
 
 const arr = Array(2);
-
 console.log(arr);
