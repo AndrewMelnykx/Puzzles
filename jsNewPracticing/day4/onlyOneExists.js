@@ -18,8 +18,6 @@ const arr = [1, 2, 3, 4, 5, 3, 2];
 //   return duplicates;
 // };
 
-// console.log(onceRepeated(arr));
-
 const result = arr.filter((v) => {
   return arr.indexOf(v) === arr.lastIndexOf(v);
 });

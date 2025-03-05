@@ -7,7 +7,7 @@ const arr = ["I want to become", "a professional front end", "developer"];
 
 // console.log(eachWordString);
 
-// Another Solution
+// Another SolutionІS
 
 const result = arr.map((x) => x.split(" "));
 
