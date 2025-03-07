@@ -1,7 +1,12 @@
 const object = Object.create(
-  { subject: "javascript" },
+  { subject: "javascript", enumerable: true },
   {
-    lesson: { value: "Object Assign", enumerable: true },
+    lesson: {
+      value: "Object Assign",
+      enumerable: true,
+      writable: true,
+      configurable: true,
+    },
   }
 );
 
