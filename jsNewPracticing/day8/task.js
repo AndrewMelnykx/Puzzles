@@ -6,8 +6,15 @@ var generate = function (numRows) {
   let result = [];
   for (let i = 0; i < numRows; i++) {
     let row = new Array(i + 1).fill(1);
+  }
+  return result;
+};
 
-    for (let j = 1; j < row.length - 1; j++) {
+var degenerate = function (numRows) {
+  let result = [];
+  for (let i = 0; i < numRows; i++) {
+    let row = new Array(i + 1).fill(1);
+    for (let j = 1; j < row.length; j++) {
       row[j] = result[i - 1][j - 1] + result[i - 1][j];
     }
     result.push(row);
@@ -15,6 +22,6 @@ var generate = function (numRows) {
   return result;
 };
 
-const output = generate(numRows);
+const output = degenerate(numRows);
 
 console.log(output);
