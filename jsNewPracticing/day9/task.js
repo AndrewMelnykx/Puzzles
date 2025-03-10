@@ -22,8 +22,7 @@
 // };
 
 // let prices = [7, 1, 5, 3, 6, 4];
-// let prices = [7, 6, 4, 3, 1];
-let prices = [1, 2];
+// let prices = [1, 2];
 // var maxProfit = function (prices) {
 //   let result = [];
 
@@ -38,6 +37,8 @@ let prices = [1, 2];
 //   }
 //   return result;
 // };
+// let prices = [7, 6, 4, 3, 1];
+let prices = [7, 1, 5, 3, 6, 4];
 
 var maxProfit = function (prices) {
   let minPrice = prices[0];
@@ -46,11 +47,25 @@ var maxProfit = function (prices) {
   for (let i = 1; i < prices.length; i++) {
     const profit = prices[i] - minPrice;
     maxProfit = Math.max(maxProfit, profit);
-    minPrice = Math.min(minPrice, prices[i]); // update minPrice only if you find a lower price
+    minPrice = Math.min(minPrice, prices[i]);
   }
 
   return maxProfit;
 };
-const result = maxProfit(prices);
+
+const maxProfitFunc = function (prices) {
+  let minPrice = prices[0];
+  let maxProfit = 0;
+
+  for (let i = 1; i < prices.length; i++) {
+    const profit = prices[i] - minPrice;
+    maxProfit = Math.max(maxProfit, profit);
+    minPrice = Math.min(minPrice, prices[i]);
+  }
+
+  return maxProfit;
+};
+
+const result = maxProfitFunc(prices);
 
 console.log(result);
