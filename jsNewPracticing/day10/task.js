@@ -15,6 +15,7 @@ var singleNumber = function (nums) {
     }
   }
 };
+
 let arr1 = [4, 1, 2, 1, 2];
 
 var singleNumber2 = function (nums) {
