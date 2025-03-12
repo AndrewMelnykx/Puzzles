@@ -13,7 +13,18 @@ class Test {
 }
 
 const test = new Test();
-
-test.prop = "bar";
-test.prop();
+// test.prop();
+// test.prop = "bar";
 Test.prop;
+
+// Test.prototype.prop = function () {
+//   console.log("prototype overridden method", this.a);
+//   return "prototype overridden";
+// };
+
+test.prop = function () {
+  console.log("overridden method", this.a);
+  return "overridden";
+};
+
+test.prop();
