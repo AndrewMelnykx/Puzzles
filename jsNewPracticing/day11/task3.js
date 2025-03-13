@@ -10,9 +10,6 @@ var containsNearbyDuplicate = function (nums, k) {
       }
     }
   }
-  //   for (let key in result) {
-  //     arrayResults.push(result[key] + " " + key);
-  //   }
   return result++;
 };
 
