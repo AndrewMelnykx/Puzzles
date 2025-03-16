@@ -26,23 +26,22 @@ const arr = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 // gpt solution
 
 const maxArea = function (height) {
-  let left = 0;
   let right = height.length - 1;
-  let maxWater = 0;
+  let left = 0;
+  let maxNumber = 0;
 
-  while (left < right) {
-    const area = Math.min(height[left], height[right]) * (right - left);
-    maxWater = Math.max(maxWater, area);
-
+  while (height[left] < height[right]) {
+    let maxArea = Math.min(height[left], height[right]) * (right - left);
+    maxWater = Math.max(maxWater, maxArea);
     if (height[left] < height[right]) {
       left++;
     } else {
-      right--;
+      right++;
     }
   }
-
   return maxWater;
 };
+
 const output = maxArea(arr);
 
 console.log(output);
