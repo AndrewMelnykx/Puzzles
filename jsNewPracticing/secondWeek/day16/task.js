@@ -23,27 +23,15 @@ let nums = [1, 7, 3, 6, 5, 6];
 //   return sumRight;
 // };
 
-var pivotIndex1 = function (nums) {
-  let total = nums.reduce((acc, cur) => acc + cur, 0);
-  let leftSum = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    let rightSum = total - leftSum - nums[i];
-    if (leftSum === rightSum) return i;
-    leftSum += nums[i];
-  }
-  return -1;
-};
-
 var pivotIndex = function (nums) {
-  let total = nums.reduce((acc, num) => acc + num, 0);
+  let totalSum = nums.reduce((total, num) => total + num, 0);
   let leftSum = 0;
+
   for (let i = 0; i < nums.length; i++) {
-    let rightSum = total - leftSum - nums[i];
-    if (leftSum === rightSum) return i;
+    let rightSum = totalSum - leftSum - nums[i];
+    if (rightSum === leftSum) return i;
     leftSum += nums[i];
   }
-  return -1;
 };
 
 let output = pivotIndex(nums);
