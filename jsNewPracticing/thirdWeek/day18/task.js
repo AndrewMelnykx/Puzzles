@@ -1,5 +1,5 @@
-let nums = [5, 7, 7, 8, 8, 10];
-let target = 8;
+let nums = [1];
+let target = 1;
 
 var searchRange = function (nums, target) {
   let left = 0;
@@ -7,6 +7,10 @@ var searchRange = function (nums, target) {
   let result = {};
   let resultArray = [];
 
+  if (resultArray.length === 1) {
+    resultArray[0] === 0;
+    resultArray[1] === 0;
+  }
   while (left <= right) {
     let mid = Math.floor((left + right) / 2);
     if (nums[mid] <= target) {
@@ -29,13 +33,10 @@ var searchRange = function (nums, target) {
 
   if (resultArray.length > 1) {
     return resultArray;
-  } else if (resultArray.length === 1) {
-    return [0, 0];
   } else {
     return [-1, -1];
   }
 };
-
 let output = searchRange(nums, target);
 
 console.log(output);
