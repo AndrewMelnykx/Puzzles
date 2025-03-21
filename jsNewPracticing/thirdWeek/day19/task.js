@@ -1,23 +1,20 @@
 let nums = [4, 4, 5];
 
 var findErrorNums = function (nums) {
-  let correctArr = [];
-  let doubleNum = 0;
-  let replacement = doubleNum;
-  for (let i = 1; i < nums.length + 1; i++) {
-    correctArr.push(i);
-  }
+  let repeated = [];
+  let answerArr = [];
+  //   let doubleNum = 0;
+  //   let replacement = 0;
+  let counter = 0;
   for (let i = 0; i < nums.length - 1; i++) {
     if (nums[i] === nums[i + 1]) {
-      doubleNum = nums[i + 1];
+      repeated.push(nums[i], i);
     }
   }
-  if (nums[doubleNum + 2] > nums[doubleNum]) {
-    replacement = doubleNum - 1;
-  } else {
-    replacement = doubleNum + 1;
+  for (let i = 0; i < nums.length; i++) {
+    answerArr.push(i + nums[0]);
   }
-  return [doubleNum, replacement];
+  return answerArr;
 };
 
 let output = findErrorNums(nums);
