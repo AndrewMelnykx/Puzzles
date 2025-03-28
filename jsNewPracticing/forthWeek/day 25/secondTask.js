@@ -1,18 +1,17 @@
-let nums = [2, 3, 1, 1, 4];
+let nums = [5, 5, 1, 1, 4, 2, 7, 9];
 
 var jump = function (nums) {
-  let last = nums.length - 1;
-  let currentEnd = 0;
   let jumps = 0;
-  let maxEnd = currentEnd;
-  let start = nums[0];
-  for (let i = 0; i < start; i++) {
-    start = Math.max(start, nums[i]);
-  }
-  for (let i = maxEnd; i < last; i++) {
-    currentEnd += start;
-    currentEnd += Math.max(nums[i], nums[maxEnd]);
-    jumps++;
+  let farthest = 0;
+  let currentEnd = 0;
+
+  for (let i = 0; i < nums.length - 1; i++) {
+    farthest = Math.max(farthest, i + nums[i]);
+    if (i === currentEnd) {
+      jumps++;
+      currentEnd = farthest;
+    }
+    if (currentEnd >= nums.length - 1) break;
   }
   return jumps;
 };
