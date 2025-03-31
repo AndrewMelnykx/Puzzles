@@ -52,21 +52,3 @@ var merge = function (intervals) {
 let output = merge(intervals);
 
 console.log(output);
-
-var merge = function (intervals) {
-  let resultArr = [];
-  if (intervals.length <= 1) return intervals;
-  intervals.sort((a, b) => a[0] - b[0]);
-
-  resultArr.push(intervals[0]);
-
-  for (let i = 1; i < intervals.length; i++) {
-    let lastInterval = resultArr[resultArr.length - 1];
-    let currentInterval = intervals[i];
-    if (currentInterval[0] <= lastInterval[1]) {
-      lastInterval[1] = Math.max(lastInterval[1], currentInterval);
-    } else {
-      resultArr.push(currentInterval);
-    }
-  }
-};
