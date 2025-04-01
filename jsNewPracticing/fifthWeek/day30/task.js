@@ -8,7 +8,7 @@ function checkBrackets(input) {
   for (let i = 0; i < input.length; i++) {
     const char = input[i];
     if (char === "(" || char === "[" || char === "{") {
-      stack.push({ bracket: char, index: index + 1 });
+      stack.push({ bracket: char, index: i + 1 });
     } else if (char === ")" || char === "]" || char === "}") {
       if (
         stack.length === 0 ||
