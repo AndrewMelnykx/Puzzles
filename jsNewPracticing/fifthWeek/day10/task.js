@@ -5,7 +5,6 @@ let points = [
   [0, 2],
   [2, 0],
 ];
-
 // My wrong solution
 var largestTriangleArea = function (points) {
   let heightOfTriangle = points[points.length - 2][1];
