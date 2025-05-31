@@ -66,18 +66,18 @@
 // loseWeight(dog, 5);
 // console.log(dog.weight);
 
-function abc(x, y, z) {
-  this.x = x;
-  this.y = y;
-  this.z = z;
-}
+// function abc(x, y, z) {
+//   this.x = x;
+//   this.y = y;
+//   this.z = z;
+// }
 
-var instance = new abc(1, 2, 3);
+// var instance = new abc(1, 2, 3);
 
-console.log(instance);
+// console.log(instance);
 
-const orgObject = { company: "XYZ Corp" };
-const carObject = { name: "Toyota" };
-const staff = Object.assign({}, orgObject, carObject);
+// const orgObject = { company: "XYZ Corp" };
+// const carObject = { name: "Toyota" };
+// const staff = Object.assign({}, orgObject, carObject);
 
-console.log(staff);
+// console.log(staff);
