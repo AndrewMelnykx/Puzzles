@@ -8,7 +8,8 @@
 // You have to disucss and if team and ect inst on your  side , than fix all features before
 
 // 4) How browser works ?
-// When we write inside search line it completes http request to the server , and if its okay , server returns to us html code which will be rendered
+// When we write inside search line it completes http request to the server , and if its okay , server returns to us html
+//  code which will be rendered
 
 // 5) For what it servers (browser)?
 
@@ -16,7 +17,8 @@
 
 // 6) How rendering works
 
-// We receive html code from server ,then browser parse it and turn into DOM, then it creates a rendering tree , after that it calculates sizes of positioning ,
+// We receive html code from server ,then browser parse it and turn into DOM, then it creates a rendering tree ,
+// after that it calculates sizes of positioning ,
 // Painting
 // The browser paints pixels to the screen — text, colors, images, etc.
 
@@ -39,18 +41,19 @@
 // defer → runs after parsing completes, never blocks HTML.
 
 // 8) For what we use one instead another ?
-// If script doesnt inflcit on UI we might use async but if it is then defer suits well
+// If script doesnt inflict on UI we might use async but if it is then defer suits well
 
-// 9) If youre creating a brand new project , without frame works and even js , what is your best pratices for that reason.
+// 9) If youre creating a brand new project , without frame works and even js , what is your best practices for that reason.
 
-// First of all i will think about architecture of the project , then about team preferenes , if im alone then mine preferences such as:
+// First of all i will think about architecture of the project , then about team preferences , if im alone then mine preferences such as:
 
 // prettier, eslint ,dependencies,
 // then css or scss , modular or not (explain to me the difference)
 
 // 10) Arrow funcs and their meaning
-// Also called lambda funcs, its a functions created from a const, the main difference between regular funcs , is that they dont have their own .this context
-// means they use this from context where they curently are
+// Also called lambda funcs, its a functions created from a const, the main difference between regular funcs , is that they dont have
+// their own .this context
+// means they use this from context where they currently are
 // arrow cant be construction funcs , and they dont  have keyword arguments
 
 // 11) Do we can use bind call and apply with arrow func ?
@@ -70,26 +73,27 @@
 // const _ = require('lodash');
 // const deepCopy = _.cloneDeep(original);
 
-// 15)Did you use any custom methods except we were speking above , for deep obj copying?
+// 15)Did you use any custom methods except we were speaking above , for deep obj copying?
 //  Custom method is use plain recursion until obj will be empty
 
-// 16) Difference between mutable and unmutable array methods in js ?
+// 16) Difference between mutable and immutable array methods in js ?
 
-// Examples of mutable methods:                         Examples of immutable methods:
-// .push() — add items at the end
-// .map() — create a new array by transforming elements
-// .pop() — remove the last item
-// .filter() — create a new array with filtered elements
-// .shift() — remove the first item
-// .slice() — create a shallow copy or extract part of array
-// .unshift() — add items at the start
-// .splice() — add/remove items anywhere
-// .sort() — sort the array in place
-// .sort() — sort the array in place
-// .reverse() — reverse the array in place                // .concat() — merge arrays into a new one
-// .reduce() — reduce to a single value (doesn’t modify original)
-
-// .includes(), .indexOf() — search without modifying
+// | Method              | Type       | Purpose                                           | Example                             |
+// | ------------------- | ---------- | ------------------------------------------------- | ----------------------------------- |
+// | `.push()`           | Mutable    | Adds element(s) to the end of the array           | `arr.push(4)`                       |
+// | `.pop()`            | Mutable    | Removes the last element                          | `arr.pop()`                         |
+// | `.shift()`          | Mutable    | Removes the first element                         | `arr.shift()`                       |
+// | `.unshift()`        | Mutable    | Adds element(s) to the beginning                  | `arr.unshift(0)`                    |
+// | `.splice()`         | Mutable    | Adds/removes elements at a specific index         | `arr.splice(1, 1, 'x')`             |
+// | `.sort()`           | Mutable    | Sorts the array in place                          | `arr.sort()`                        |
+// | `.reverse()`        | Mutable    | Reverses the array in place                       | `arr.reverse()`                     |
+// | `.map()`            | Immutable  | Transforms each element, returns a new array      | `arr.map(x => x * 2)`               |
+// | `.filter()`         | Immutable  | Filters elements based on a condition             | `arr.filter(x => x > 0)`            |
+// | `.slice()`          | Immutable  | Returns a portion of the array                    | `arr.slice(1, 3)`                   |
+// | `.concat()`         | Immutable  | Combines arrays into a new one                    | `arr.concat([4, 5])`                |
+// | `.reduce()`         | Immutable  | Reduces array to a single value                   | `arr.reduce((a, b) => a + b, 0)`    |
+// | `.includes()`       | Immutable  | Checks if value exists in array                   | `arr.includes(2)`                   |
+// | `.indexOf()`        | Immutable  | Finds index of value in array                     | `arr.indexOf(3)`                    |
 
 // 17)spread and rest operator , in js , where we can use it ?
 
@@ -120,3 +124,16 @@
 // Creational : Singletone, Builder,Factory
 //Structural pattern : Facade, Adapter
 //Behavioral:Strategy,Observer
+
+// Example creational:
+// SINGLETONE is axios instance and next reuse it for child requests
+//   BUILDER  when we use class to create a building template like request below
+// FACTORY Switch case with type of new object we need and then useFactory.("typeOfObject",... extra data)
+
+// Example structural:
+// FACADE is a design pattern where a class provides a simplified and unified interface to a set of more complex subsystems or functions.
+// It hides the complexity by exposing a small, easy-to-use API.
+// ADAPTER is a function or class that transforms data or behavior from one format/interface into another so it can be
+// reused or integrated with other parts of the system.
+// STRATEGY Strategy is when we reuse one class or function (a strategy) inside another bigger class (a context),
+// and adjust behavior by changing the strategy, not the whole class.

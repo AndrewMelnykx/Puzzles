@@ -4,7 +4,6 @@ let character = "e";
 var shortestToChar = function (s, c) {
   const result = new Array(s.length);
   let prev = -Infinity;
-
   for (let i = 0; i < s.length; i++) {
     if (s[i] === c) {
       prev = i;
@@ -18,7 +17,6 @@ var shortestToChar = function (s, c) {
     }
     result[i] = Math.min(result[i], Math.abs(i - prev));
   }
-  return Math.abs(-Infinity - 3);
 };
 const result = shortestToChar(str, character);
 console.log(result);
