@@ -274,3 +274,70 @@
 // - More **flexible** (can represent unions, tuples, primitives, etc.)
 // - Cannot be merged
 // - Use when combining types or working with more complex structures
+
+// 39) What are utills types , and which do you  of them do you know/used ?
+// | Utility         | What it does                            | Example                                             |
+// |-----------------|------------------------------------------|-----------------------------------------------------|
+// | Partial<T>      | Makes all properties optional            | Partial<User> → { name?: string; age?: number }     |
+// | Required<T>     | Makes all properties required            | Required<User> → { name: string; age: number }      |
+// | Readonly<T>     | Makes all properties read-only           | Readonly<User> → { readonly name: string; ... }     |
+// | Pick<T, K>      | Picks a subset of properties             | Pick<User, 'name'> → { name: string }               |
+// | Omit<T, K>      | Omits a set of properties                | Omit<User, 'age'> → { name: string }                |
+// | Record<K, T>    | Keys `K` with values of type `T`         | Record<string, number> → { [key: string]: number }  |
+// | Exclude<T, U>   | Excludes types from union                | Exclude<'a' | 'b', 'b'> → 'a'                        |
+// | Extract<T, U>   | Extracts types from union                | Extract<'a' | 'b', 'b' | 'c'> → 'b'                  |
+// | ReturnType<T>   | Gets the return type of a function       | ReturnType<() => number> → number                   |
+
+// 40) Generic in ts what is that ?
+// Generics in TypeScript are a way to define components
+//  (like functions, classes, or interfaces) with placeholder types that are specified later.
+//  They are written using angle brackets with type parameters,
+//  e.g., <T>, to make code flexible and type-safe across different data types.
+
+// 41) What chunk is ?
+// Chunks are separate pieces of code split out during the build process to optimize loading.
+
+// Example: Instead of one big bundle.js, Webpack can create multiple chunks like main.js, vendor.js, etc.
+
+// This improves performance via code splitting and lazy loading.
+
+// 42) What is composition?
+// Composition in frontend (and general programming) is a design principle where you build complex functionality
+//  by combining smaller, reusable pieces instead of using inheritance.
+
+//  44) And what us decomposition?
+// While composition builds things up, decomposition breaks
+// them down — both are core strategies for writing clean, maintainable code.
+
+//45) HTTP Request and Response?
+// HTTP Methods and Their Purpose
+// | Method  | Purpose                                        |
+// |---------|------------------------------------------------|
+// | GET     | Retrieve data from the server                   |
+// | POST    | Send data to the server to create a new resource|
+// | PUT     | Update an existing resource completely          |
+// | PATCH   | Update part of an existing resource             |
+// | DELETE  | Remove a resource from the server                |
+// | OPTIONS | Describe the communication options for the target resource |
+// | HEAD    | Retrieve headers (metadata) for a resource without the body |
+
+// 46) Did you work with web sockets ?
+// Yes i did , it serves for uninterrupted server connection , for instance i did a chat app.
+
+// 48) Short and long polling in js?
+// | Technique      | Description                                                                                  |
+// |----------------|----------------------------------------------------------------------------------------------|
+// | Short Polling  | Client repeatedly sends requests at fixed intervals to check for new data from the server.  |
+// | Long Polling   | Client sends a request, and the server holds the connection open until new data is available, then responds.
+//      The client immediately sends another request, creating near real-time updates without constant polling. |
+// | WebSockets     | Creates a persistent, full-duplex connection allowing real-time two-way communication without repeated requests. |
+
+// 49) What is react fiber , and how it is different from?
+// React Fiber is a complete rewrite of React’s reconciliation algorithm that enables incremental rendering, allowing React to
+// pause, prioritize, and resume work for better performance and smoother user interfaces.
+// Unlike the Virtual DOM—which is a lightweight copy of the real DOM used to figure out what changes are needed—Fiber focuses on how and
+//  when those updates happen, improving responsiveness especially in complex apps.
+
+//  50)React reconciliation?
+// React reconciliation is the process of comparing the new Virtual DOM with the previous one to identify changes.
+// React then updates only the necessary parts of the real DOM, making rendering efficient and fast.
