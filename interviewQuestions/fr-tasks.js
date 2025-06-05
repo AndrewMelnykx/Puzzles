@@ -338,6 +338,6 @@
 // Unlike the Virtual DOM—which is a lightweight copy of the real DOM used to figure out what changes are needed—Fiber focuses on how and
 //  when those updates happen, improving responsiveness especially in complex apps.
 
-//  50)React reconciliation?
+//  50) React reconciliation?
 // React reconciliation is the process of comparing the new Virtual DOM with the previous one to identify changes.
 // React then updates only the necessary parts of the real DOM, making rendering efficient and fast.
