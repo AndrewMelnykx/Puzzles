@@ -24,24 +24,6 @@ for (let a of aliceSizes) {
 var fairCandySwap1 = function (aliceSizes, bobSizes) {
   const sumA = aliceSizes.reduce((t, n) => t + n, 0);
   const sumB = bobSizes.reduce((t, n) => t + n, 0);
-  const diff = (sumA - sumB) / 2;
-  const setB = new Set(bobSizes);
-
-  for (let a of aliceSizes) {
-    const b = a - diff;
-    if (setB.has(b)) {
-      return [a, b];
-    }
-  }
-};
-
-const result = fairCandySwap(aliceSizes, bobSizes);
-
-console.log(result);
-
-var fairCandySwap = function (aliceSizes, bobSizes) {
-  const sumA = aliceSizes.reduce((t, n) => t + n, 0);
-  const sumB = bobSizes.reduce((t, n) => t + n, 0);
 
   const diff = (sumA - sumB) / 2;
   const setB = new Set(bobSizes);
@@ -52,3 +34,21 @@ var fairCandySwap = function (aliceSizes, bobSizes) {
     }
   }
 };
+var fairCandySwap = function (aliceSizes, bobSizes) {
+  const sumA = aliceSizes.reduce((t, n) => t + n, 0);
+  const sumB = bobSizes.reduce((t, n) => t + n, 0);
+
+  const diff = (sumA - sumB) / 2;
+  const bobUniqueCandies = new Set(bobSizes);
+
+  for (let aliceCandy of aliceSizes) {
+    const bobCandy = aliceCandy - diff;
+    if (bobUniqueCandies.has(bobCandy)) {
+      return [aliceCandy, bobCandy];
+    }
+  }
+};
+
+const result = fairCandySwap(aliceSizes, bobSizes);
+
+console.log(result);
