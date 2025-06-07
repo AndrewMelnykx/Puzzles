@@ -1,4 +1,4 @@
-let strs = ['cba', 'daf', 'ghi'];
+let strs = ["cba", "daf", "ghi"];
 
 var minDeletionSize = function (strs) {
   let columns = [];
@@ -64,22 +64,22 @@ var minDeletionSize = function (strs) {
 };
 
 //GPT SOLUTION TO WRITE
-function minDeletionSize(strs) {
-  let deleteCount = 0;
-  const numRows = strs.length;
-  const numCols = strs[0].length;
 
-  for (let col = 0; col < numCols; col++) {
-    for (let row = 1; row < numRows; row++) {
-      if (strs[row][col] < strs[row - 1][col]) {
-        deleteCount++;
-        break; // Stop checking this column, it's not sorted
-      }
-    }
-  }
+// function minDeletionSize1(strs) {
+//   let deleteCount = 0;
+//   const numRows = strs.length;
+//   const numCols = strs[0].length;
 
-  return deleteCount;
-}
+//   for (let col = 0; col < numCols; col++) {
+//     for (let row = 1; row < numRows; row++) {
+//       if (strs[row][col] < strs[row - 1][col]) {
+//         deleteCount++;
+//         break;
+//       }
+//     }
+//   }
+//   return deleteCount;
+// }
 
 const result = minDeletionSize(strs);
 console.log(result);
