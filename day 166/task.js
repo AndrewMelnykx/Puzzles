@@ -9,6 +9,5 @@ var repeatedNTimes = function (nums) {
     repeated[nums[i]] = true;
   }
 };
-
 const result = repeatedNTimes(nums);
 console.log(result);
