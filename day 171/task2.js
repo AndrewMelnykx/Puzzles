@@ -1,23 +1,5 @@
 let strs = ["act", "pots", "tops", "cat", "stop", "hat"];
 
-// class Solution {
-//   /**
-//    * @param {string[]} strs
-//    * @return {string[][]}
-//    */
-//   groupAnagrams(strs) {
-//     let map = {};
-//     for (let word of str) {
-//       let key = word.split("").sort().join("");
-//       if (!map[key]) {
-//         map[key] = [];
-//       }
-//       map[key].push(word);
-//     }
-//     return Object.values(map);
-//   }
-// }
-
 class Solution {
   /**
    * @param {string[]} strs
@@ -27,7 +9,7 @@ class Solution {
     let map = {};
     for (let word of strs) {
       let key = word.split("").sort().join("");
-      if (!map[key]) {
+      if (map[key] !== undefined) {
         map[key] = [];
       }
       map[key].push(word);
