@@ -7,6 +7,7 @@ let k = 2;
 //    * @param {number} k
 //    * @return {number[]}
 //    */
+
 //   topKFrequent(nums, k) {
 //     let map = {};
 //     for (let num of nums) {
@@ -14,25 +15,24 @@ let k = 2;
 //         map[num]++;
 //       }
 //       let sorted = Object.entries(map).sort((a, b) => b[1] - a[1]);
-//       return sorted.slice(0, k).map(number => Number(number));
+//       return sorted.slice(0, k).map(entry => Number(entry));
 //     }
 //   }
 // }
-
 class Solution {
-  /**
-   * @param {number[]} nums
-   * @param {number} k
-   * @return {number[]}
-   */
+  //   /**
+  //    * @param {number[]} nums
+  //    * @param {number} k
+  //    * @return {number[]}
+  //    */
 
   topKFrequent(nums, k) {
     let map = {};
-    for (let num of nums) {
+    for (num of nums) {
       if (map[num] !== undefined) {
         map[num]++;
       }
-      let sorted = Object.entries(map).sort((a, b) => b[1] - a[1]);
+      let sorted = Object.entries(map).filter((a, b) => b[1] - a[1]);
       return sorted.slice(0, k).map(entry => Number(entry));
     }
   }
