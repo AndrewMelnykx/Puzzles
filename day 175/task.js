@@ -15,8 +15,20 @@ class Solution {
    * @param {character[][]} board
    * @return {boolean}
    */
-  isValidSudoku(board) {}
+  isValidSudoku(board) {
+    let map = {};
+    let nums = board.map(item => {
+      return item.map(str => (str === "." ? "." : Number(str)));
+    });
+    let firstRow = nums[0];
+    for (let i = 0; i < firstRow.length; i++) {
+      let res = [];
+    }
+    return nums;
+  }
 }
 
 let solution = new Solution();
 let result = solution.isValidSudoku(board);
+
+console.log(result);
