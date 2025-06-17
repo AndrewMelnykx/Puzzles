@@ -41,6 +41,30 @@ class Solution {
     return res;
   }
 }
+
+class Solution {
+  /**
+   * @param {number[]} nums
+   * @return {number[]}
+   */
+
+  productExceptSelf(nums) {
+    const numsLength = nums.length;
+    const resultArr = Array(numsLength).fill(1);
+
+    let left = 1;
+    for (let i = 0; i < numsLength; i++) {
+      resultArr[i] = left;
+      left *= nums[i];
+    }
+    let right = 1;
+    for (let i = numsLength - 1; i >= 0; i--) {
+      resultArr[i] *= right;
+      right *= nums[i];
+    }
+    return resultArr;
+  }
+}
 let solution = new Solution();
 
 let result = solution.productExceptSelf(nums);
