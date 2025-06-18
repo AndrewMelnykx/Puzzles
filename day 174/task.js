@@ -15,11 +15,11 @@ class Solution {
       left *= nums[i];
     }
 
-    // let right = 1;
-    // for (let i = numsLength - 1; i >= 0; i--) {
-    //   res[i] *= right;
-    //   right *= nums[i];
-    // }
+    let right = 1;
+    for (let i = numsLength - 1; i >= 0; i--) {
+      res[i] *= right;
+      right *= nums[i];
+    }
     return res;
   }
 }
