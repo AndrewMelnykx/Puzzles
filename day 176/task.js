@@ -7,9 +7,8 @@ class Solution {
    */
   longestConsecutive(nums) {
     nums.sort((a, b) => a - b);
-
-    let maxCount = 1;
     let count = 1;
+    let maxCount = 1;
     for (let i = 1; i < nums.length; i++) {
       if (nums[i] === nums[i - 1]) {
         continue;
@@ -20,6 +19,7 @@ class Solution {
         count = 1;
       }
     }
+    return maxCount;
   }
 }
 
