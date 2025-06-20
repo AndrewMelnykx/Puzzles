@@ -44,12 +44,12 @@ let s = "Was it a car or a cat I saw";
 //   return cleaned === [...cleaned].reverse().join("");
 // }
 
-class Solution {
-  isPalindrome(s) {
-    let cleaned = s.toLowerCase().replace(/[^a-z0-9]/g, "");
-    return cleaned === [...cleaned].reverse().join("");
-  }
-}
+// class Solution {
+//   isPalindrome(s) {
+//     let cleaned = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+//     return cleaned === [...cleaned].reverse().join("");
+//   }
+// }
 
 let solution = new Solution();
 
