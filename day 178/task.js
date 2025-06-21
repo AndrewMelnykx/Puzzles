@@ -17,6 +17,17 @@ class Solution {
     }
   }
 }
+// class Solution {
+//   twoSum(numbers, target) {
+//     for (let i = 0; i < numbers.length; i++) {
+//       for (let j = i + 1; i < numbers.length; j++) {
+//         if (numbers[i] + numbers[j] === target) {
+//           return [i + 1, j + 1];
+//         }
+//       }
+//     }
+//   }
+// }
 
 let solution = new Solution();
 let result = solution.twoSum(numbers, target);
