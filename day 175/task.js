@@ -37,10 +37,6 @@ class Solution {
   }
 }
 class Solution {
-  /**
-   * @param {character[][]} board
-   * @return {boolean}
-   */
   isValidSudoku(board) {
     const rows = Array.from({ length: 9 }, () => new Set());
     const cols = Array.from({ length: 9 }, () => new Set());
@@ -55,7 +51,7 @@ class Solution {
           return false;
         }
         rows[r].add(val);
-        rows[c].add(val);
+        cols[c].add(val);
         boxes[boxIndex].add(val);
       }
     }

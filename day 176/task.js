@@ -33,7 +33,6 @@ class Solution {
     nums.sort((a, b) => a - b);
     let count = 1;
     let maxCount = 1;
-
     for (let i = 1; i < nums.length; i++) {
       if (nums[i] === nums[i - 1]) {
         continue;
@@ -41,10 +40,9 @@ class Solution {
         count++;
       } else {
         maxCount = Math.max(maxCount, count);
-        count = 1;
       }
     }
-    return maxCount;
+    return Math.max(maxCount, count);
   }
 }
 
