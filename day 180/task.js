@@ -53,31 +53,6 @@ class Solution {
   }
 }
 
-class Solution {
-  /**
-   * @param {number[]} heights
-   * @return {number}
-   */
-
-  maxArea(heights) {
-    let left = 0;
-    let right = heights.length - 1;
-    let maxProduct = 0;
-
-    while (left < right) {
-      const heightMin = Math.min(heights[left], heights[right]);
-      const width = right - left;
-      maxProduct = Math.max(maxProduct, area);
-    }
-    if (heights[left] < heights[right]) {
-      left++;
-    } else {
-      right--;
-    }
-    return maxProduct;
-  }
-}
-
 let solution = new Solution();
 let result = solution.maxArea(height);
 
