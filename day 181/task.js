@@ -55,6 +55,29 @@ class Solution {
   }
 }
 
+class Solution {
+  /**
+   * @param {number[]} height
+   * @return {number}
+   */
+
+  trap(height) {
+    let left = 0;
+    let right = height - 1;
+    while (left < right) {
+      let product = height[left] * height[right];
+      if (product > maxProduct) {
+        maxProduct = product;
+      }
+      if (height[left] < height[right]) {
+        left++;
+      } else {
+        right--;
+      }
+    }
+  }
+}
+
 let solution = new Solution();
 let result = solution.trap(height);
 
