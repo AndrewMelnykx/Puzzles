@@ -16,10 +16,10 @@ class MinStack {
       this.MinStack.length === 0 ? val : Math.min(val, this.MinStack[this.MinStack.length - 1]);
     this.MinStack.push(min);
 
-    this.stack.push(val);
-    const min =
-      this.MinStack.length == 0 ? val : Math.min(val, this.MinStack[this.MinStack.length - 1]);
-    this.MinStack.push(min);
+    // this.stack.push(val);
+    // const min =
+    //   this.MinStack.length == 0 ? val : Math.min(val, this.MinStack[this.MinStack.length - 1]);
+    // this.MinStack.push(min);
   }
 
   /**
