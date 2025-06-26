@@ -57,20 +57,23 @@ class Solution {
 }
 
 class Solution {
-  isValid(s) {
+  //   /**
+  //    * @param {string} s
+  //    * @return {boolean}
+  //    */
+
+  isValid(par) {
     const stack = [];
     const map = {
       ")": "(",
-      "]": "[",
       "}": "{",
+      "]": "[",
     };
-    for (let char of s) {
-      if (char === "(" || char === "{" || char === "[") {
+    for (let char of par) {
+      if (char === "}" || char === ")" || char === "]") {
         stack.push(char);
       } else {
-        if (stack.pop() !== map[char]) {
-          return false;
-        }
+        stack.pop() !== map[char];
       }
     }
     return stack.length === 0;
