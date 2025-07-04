@@ -33,3 +33,6 @@ let solution = new Solution();
 let result = solution.twoSum(numbers, target);
 
 console.log(result);
+consile log consale log 
+edit wdit 
+end
