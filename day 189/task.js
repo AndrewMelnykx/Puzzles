@@ -25,7 +25,7 @@ class Solution {
   }
 }
 
-//GPR SOLUTION
+//GPT SOLUTION
 
 class Solution {
   /**
