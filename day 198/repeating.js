@@ -31,6 +31,18 @@ class Solution {
     return res;
   }
 }
+class Solution {
+  topFrequent(nums) {
+    let freq = {};
+    for (let num of nums) {
+      freq[num] = (freq[num] || 0) + 1;
+    }
+    return Object.entries(freq)
+      .sort((a, b) => a[1] - b[1])
+      .slice(0, k)
+      .map(entry => numbers(entry[0]));
+  }
+}
 
 class Solution {
   threeSum(nums) {
