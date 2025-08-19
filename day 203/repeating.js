@@ -88,7 +88,7 @@ class Solution {
    */
   characterReplacement(s, k) {
     let left = 0;
-    let count = {};
+    let counts = {};
     let maxCount = 0;
     let MaxLength = 0;
 
