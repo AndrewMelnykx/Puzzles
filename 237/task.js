@@ -22,18 +22,18 @@ var decompressRLElist = function (nums) {
 
   return result;
 };
-// var decompressRLElist = function(nums) {
-//   let result = [];
 
-//   for (let i = 0; i < nums.length; i += 2) {
-//     let freq = nums[i];      // how many times to repeat
-//     let val = nums[i + 1];   // what value to repeat
+var decompressRLElist = function (nums) {
+  let result = [];
 
-//     result.push(...new Array(freq).fill(val));
-//   }
+  for (let i = 0; i < nums.length; i += 2) {
+    let freq = nums[i];
+    let val = nums[i + 1];
 
-//   return result;
-// };
+    result.push(...new Array(freq).fill(val));
+  }
+  return result;
+};
 
 let result = decompressRLElist(nums);
 
