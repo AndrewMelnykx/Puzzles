@@ -20,7 +20,6 @@ var arrayRankTransform = function (arr) {
 var arrayRankTransform = function (arr) {
   let sorted = [...arr].sort((a, b) => a - b);
   let map = {};
-
   let rank = 1;
 
   for (let i = 0; i < sorted.length; i++) {
@@ -42,8 +41,8 @@ var arrayRankTransform = function (arr) {
       map[sorted[i]] = rank;
       rank++;
     }
+    return arr.map(x => map[x]);
   }
-  return arr.map(x => map[x]);
 };
 
 let result = arrayRankTransform(arr);
