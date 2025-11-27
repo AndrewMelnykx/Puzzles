@@ -1,16 +1,32 @@
 let arr = [
-  [3, 7, 8],
-  [9, 11, 13],
-  [15, 16, 17],
+  [1, 10, 4, 2],
+  [9, 3, 8, 7],
+  [15, 16, 17, 12],
 ];
 
 var luckyNumbers = function (matrix) {
+  let columns = [];
+
+  for (let i = 0; i < matrix[0].length; i++) {
+    let colArr = [];
+    for (let j = 0; j < matrix.length; j++) {
+      colArr.push(matrix[j][i]);
+    }
+    columns.push(colArr);
+  }
+
   let result = [];
-  for (let row of matrix) {
-    for (let i = 0; i < row.length; i++) {
-      result.push(row[i]);
+
+  for (let i = 0; i < matrix.length; i++) {
+    let rowMin = Math.min(...matrix[i]);
+    for (let j = 0; j < matrix[i].length; j++) {
+      let colMax = Math.max(...columns[j]);
+      if (matrix[i][j] === rowMin && matrix[i][j] === colMax) {
+        result.push(matrix[i][j]);
+      }
     }
   }
+
   return result;
 };
 
