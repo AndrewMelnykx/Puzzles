@@ -10,6 +10,8 @@ var arrayStringsAreEqual = function (word1, word2) {
   let stringed2 = word2.join("");
 
   return stringed1 === stringed2;
+
+  return stringed;
 };
 
 let result = arrayStringsAreEqual(word1, word2);
