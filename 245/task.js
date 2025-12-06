@@ -7,7 +7,7 @@ let nums = [1, 2, 3, 4];
 // var runningSum = function (nums) {
 //   let re = [];
 //   let res = nums.reduce((n, t) => re.push(n + t));
-//   return re;
+//   return re;s
 // };
 
 var runningSum = function (nums) {
