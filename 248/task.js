@@ -16,6 +16,22 @@ var numIdenticalPairs = function (nums) {
   return count;
 };
 
+var numIdenticalPairs = function (nums) {
+  let freq = {};
+  let count = 0;
+
+  for (let n of nums) {
+    if (freq[n]) {
+      count += freq[n]; // all previous same elements form a pair with this one
+      freq[n]++;
+    } else {
+      freq[n] = 1;
+    }
+  }
+
+  return count;
+};
+
 let result = numIdenticalPairs(nums);
 
 console.log(result);
