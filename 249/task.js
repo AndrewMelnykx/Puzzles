@@ -34,28 +34,30 @@ var canCompleteCircuit = function (gas, cost) {
     }
   }
 };
-
 var canCompleteCircuit = function (gas, cost) {
-  let n = gas.length;
+  let totalGas = 0;
+  let totalCost = 0;
+  let tank = 0;
+  let start = 0;
 
-  for (let start = 0; start < n; start++) {
-    let tank = 0;
-    let completed = true;
-
-    for (let step = 0; step < n; step++) {
-      let i = (start + step) % n; // wrap around
-      tank += gas[i] - cost[i];
-
-      if (tank < 0) {
-        completed = false;
-        break;
-      }
-    }
-
-    if (completed) return start;
+  // Check total feasibility
+  for (let i = 0; i < gas.length; i++) {
+    totalGas += gas[i];
+    totalCost += cost[i];
   }
 
-  return -1;
+  if (totalGas < totalCost) return -1;
+
+  // Greedy choice
+  for (let i = 0; i < gas.length; i++) {
+    tank += gas[i] - cost[i];
+    if (tank < 0) {
+      start = i + 1;
+      tank = 0;
+    }
+  }
+
+  return start;
 };
 
 let result = canCompleteCircuit(gas, cost);
