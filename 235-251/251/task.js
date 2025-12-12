@@ -6,19 +6,7 @@ let wordDict = ["cats", "dog", "sand", "and", "cat"];
  * @param {string[]} wordDict
  * @return {boolean}
  */
-// var wordBreak = function (s, wordDict) {
-//   let count = 0;
-//   for (let i = 0; i < wordDict.length; i++) {
-//     if (s.includes(wordDict[i])) {
-//       count++;
-//       return true;
-//     }
-//     if (count === wordDict.length - 1) {
-//       return true;
-//     }
-//     return false;
-//   }
-// };
+
 var wordBreak = function (s, wordDict) {
   const set = new Set(wordDict);
   const dp = new Array(s.length + 1).fill(false);
@@ -33,7 +21,6 @@ var wordBreak = function (s, wordDict) {
       }
     }
   }
-
   return dp[s.length];
 };
 
