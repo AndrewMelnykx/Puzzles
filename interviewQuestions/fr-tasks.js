@@ -261,7 +261,7 @@
 // S	Single Responsibility	A class/module should have only one reason to change (one responsibility).
 // O	Open/Closed	Software entities should be open for extension, but closed for modification.
 // L	Liskov Substitution	Objects of a superclass should be replaceable with objects of a subclass without breaking the app.
-// I	Interface Segregation	Clients should not be forced to depend on interfaces they don't use (many small interfaces better than one big).
+// I	Interface Segregation	Clients should not be forced to depend on interfaces they don'te use (many small interfaces better than one big).
 // D	Dependency Inversion	Depend on abstractions, not on concrete implementations.
 
 // 38) Difference between types  and interfaces ?

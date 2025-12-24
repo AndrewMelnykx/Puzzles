@@ -163,3 +163,8 @@
 // I can also make a visual timeline diagram for this last event loop example—it’s extremely helpful for interviews to “draw it on a whiteboard.”
 
 // Do you want me to create that diagram?
+
+QUESTION ABOUT SPREAD AND REST OPERATOR 
+DESTRUCTURING
+
+DIFFERENCE BETWEEN SOLID METHODS 

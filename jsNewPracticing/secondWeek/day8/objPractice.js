@@ -9,6 +9,8 @@ let key = "hobby";
 obj[key] = "soccer";
 
 Object.assign(obj, { height: 190 });
+const copiedObj = Object.assign({}, obj);
+console.log(copiedObj);
 
 let person = { name: "Semen" };
 person = { ...person, nationality: "USA" };
@@ -28,7 +30,7 @@ Object.defineProperty(person, "age", {
 console.log(obj);
 console.log(person);
 
-const loopObj = (obj) => {
+const loopObj = obj => {
   for (key in obj) {
     console.log(key + ":" + obj[key]);
   }

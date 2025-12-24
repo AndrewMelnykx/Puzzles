@@ -7,4 +7,4 @@ let Person = class {
 
 const person = new Person("Learn", "Javascript");
 
-console.log(Person.name)
+console.log(person.name);

@@ -9,22 +9,22 @@ let grid = [
  * @param {character[][]} grid
  * @return {number}
  */
-var numIslands = function (grid) {
-  let island = 0;
-  let nums = grid.map(row => row.map(cell => Number(cell)));
-  for (let i = 0; i < grid.length; i++) {
-    let col = grid[i];
-    for (let j = 0; j < col.length; i++) {
-      let row = col[j];
-      if (row === 1 && j !== col.length && col[i][j] === 1) {
-        continue;
-      } else {
-        island++;
-      }
-    }
-  }
-  return island;
-};
+// var numIslands = function (grid) {
+//   let island = 0;
+//   let nums = grid.map(row => row.map(cell => Number(cell)));
+//   for (let i = 0; i < grid.length; i++) {
+//     let col = grid[i];
+//     for (let j = 0; j < col.length; i++) {
+//       let row = col[j];
+//       if (row === 1 && j !== col.length && col[i][j] === 1) {
+//         continue;
+//       } else {
+//         island++;
+//       }
+//     }
+//   }
+//   return island;
+// };
 
 var numIslands = function (grid) {
   let islands = 0;
