@@ -164,7 +164,16 @@
 
 // Do you want me to create that diagram?
 
-QUESTION ABOUT SPREAD AND REST OPERATOR 
-DESTRUCTURING
+// QUESTION ABOUT SPREAD AND REST OPERATOR
 
-DIFFERENCE BETWEEN SOLID METHODS 
+// DESTRUCTURING
+
+// DIFFERENCE BETWEEN SOLID METHODS
+
+// Portal in React
+
+// 404 Eror processing method concept in Next.js
+
+// Difference between query selector and id , and difference between css inside elemetn style and otside styles
+
+// HOC and other react conecptions
