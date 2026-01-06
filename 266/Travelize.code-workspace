@@ -1,0 +1,40 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../Travelize"
+	},
+	{
+		"path": "../../../../../nextRoutesDemo"
+	},
+	{
+		"path": "../../../../../Djinni"
+	},
+	{
+		"path": "../../../../../DigisTestTask"
+	},
+	{
+		"path": "../../../../../brilliantTestTask"
+	},
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../../../../../Dokumenty/GitHub/UniLink-Dashboard"
+	},
+	{
+		"path": "../../../../../jitoTest"
+	},
+	{
+		"path": "../../../../../movieApp"
+	},
+	{
+		"path": "../../../../../AgainToDo"
+	},
+	{
+		"path": "../../../../../movies"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "jitoTest"
+  }
+}

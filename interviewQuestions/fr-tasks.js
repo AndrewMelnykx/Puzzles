@@ -113,7 +113,7 @@
 // 20) Event delegation
 // If you want to stop the event from bubbling up to parents, use stopPropagation().
 
-// 21) Programming patterns that you know/used?
+21) Programming patterns that you know/used?
 // Creational : Singletone, Builder,Factory
 //Structural pattern : Facade, Adapter
 //Behavioral:Strategy,Observer
