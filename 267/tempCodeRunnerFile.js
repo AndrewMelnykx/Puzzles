@@ -1,0 +1,1 @@
+array.every(n => n % 
