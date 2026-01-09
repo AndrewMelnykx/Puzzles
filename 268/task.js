@@ -21,6 +21,7 @@ var lengthOfLIS = function (nums) {
 
     tails[left] = num;
   }
+  return tails.length;
 };
 
 let result = lengthOfLIS(nums);
