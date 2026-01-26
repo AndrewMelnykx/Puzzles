@@ -7,6 +7,9 @@
 // 3) If you have an argument with your team about your ideas or implementation
 // You have to disucss and if team and ect inst on your  side , than fix all features before
 
+//4)Closure?
+// So closure is a possibility of inner fucntion to remember the variables from outer and save it in memory , right
+
 // 4) How browser works ?
 // When we write inside search line it completes http request to the server , and if its okay , server returns to us html
 //  code which will be rendered
@@ -113,7 +116,7 @@
 // 20) Event delegation
 // If you want to stop the event from bubbling up to parents, use stopPropagation().
 
-21) Programming patterns that you know/used?
+//21) //Programming patterns that you know/used?
 // Creational : Singletone, Builder,Factory
 //Structural pattern : Facade, Adapter
 //Behavioral:Strategy,Observer
@@ -133,7 +136,7 @@
 // OBSERVER is when objects subscribes to events which happen with  others objects
 
 // 22) Best practices in pure JS for a newbie?
-//  I will say SOLID + programming patterns  and deviding into small but well structured modules ,
+//  I will say SOLID + programming patterns  and dividing into small but well structured modules ,
 //   variable names are also important
 
 // 23) What is polyfills?

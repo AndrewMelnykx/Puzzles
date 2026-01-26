@@ -177,3 +177,9 @@
 // Difference between query selector and id , and difference between css inside elemetn style and otside styles
 
 // HOC and other react conecptions
+
+// SYMBOL
+
+//Tricky questions
+
+//Difference between simple and not simple data type in ts

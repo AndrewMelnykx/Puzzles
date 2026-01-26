@@ -38,6 +38,7 @@ var maximumUnits = function (boxTypes, truckSize) {
 
   return units;
 };
+``;
 
 let result = maximumUnits(boxTypes, truckSize);
 

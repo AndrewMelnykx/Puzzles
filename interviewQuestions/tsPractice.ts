@@ -1,0 +1,28 @@
+function identity<T>(value: T): T {
+  return value;
+}
+
+const numberResult = identity<number>(42);
+const stringResult = identity<string>("hello");
+
+const inferred = identity(true);
+interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+}
+
+const userResponse: ApiResponse<{ id: number; name: string }> = {
+  data: { id: 1, name: "Alice" },
+  success: true,
+};
+
+interface UserApiResponse<T> {
+  data: T;
+}
+
+let response: UserApiResponse<{ id: number; text: string }> = {
+  data: {
+    id: 1,
+    text: "Hello",
+  },
+};
