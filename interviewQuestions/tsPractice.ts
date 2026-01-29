@@ -45,3 +45,10 @@ const account = createBankAccount();
 account.deposit(100);
 
 console.log(account.getBalance());
+
+let promise = new Promise(function (resolve, reject) {
+  resolve(1);
+  setTimeout(() => resolve(2), 1000);
+});
+
+promise.then(alert);

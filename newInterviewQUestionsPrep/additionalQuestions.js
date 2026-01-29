@@ -183,3 +183,27 @@
 //Tricky questions
 
 //Difference between simple and not simple data type in ts
+
+// Hook	What it does
+// useState	Adds local state to functional components.
+// useEffect	Runs side effects (data fetching, subscriptions, DOM mutations).
+// useContext	Accesses the value from a React Context.
+// useReducer	Alternative to useState for complex state logic.
+// useCallback	Memoizes a function reference between renders.
+// useMemo	Memoizes a computed value to avoid expensive recalculations.
+// useRef	Stores a mutable value that persists across renders; also used for DOM references.
+// useImperativeHandle	Customizes the instance value exposed when using ref with forwardRef.
+// useLayoutEffect	Like useEffect but runs synchronously after DOM mutations, before the browser paints.
+// useDebugValue	Displays a label in React DevTools for custom hooks.
+// 2️⃣ Additional Hooks (React 18+ and advanced)
+// Hook	What it does
+// useTransition	Marks state updates as non-urgent, useful for concurrent rendering.
+// useDeferredValue	Defers a value to reduce rendering priority for expensive computations.
+// useId	Generates a unique stable ID for accessibility or keys.
+// useSyncExternalStore	Subscribes to an external store (like Redux) in a concurrent-safe way.
+// useInsertionEffect	Runs synchronously before mutations and layout effects, mainly for CSS-in-JS libraries.
+
+// Type	Examples	When executed
+// Macrotask (task)	setTimeout, setInterval, setImmediate (Node), I/O events	After current stack is empty, one by one
+
+// Microtask	Promise.then, queueMicrotask, MutationObserver	Immediately after current stack, before next macrotask
