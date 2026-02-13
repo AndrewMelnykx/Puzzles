@@ -52,10 +52,10 @@ const numberPattern = `\\+?([0-9-\\s]+)([0-9-()]+)\\s?([0-9]+)`;
 
 const regexNameSol = new RegExp(
   `(Company Name:\\s[^\\n\\r]+|Account Number:\\s[A-Z]\\d{5}[A-Z]\\d{4}|Billing Period:\\s${datePattern}\\s?to\\s?${datePattern}|Account Holder:\\s?${nameAndSurnamePattern}\\s${nameAndSurnamePattern})|Meter Reading \\(Start\\):\\s?${metersPattern}|Meter Reading \\(End\\):\\s?${metersPattern}|Total Amount Due:\\s(\\$[0-9]+)\.[0-9]{2}|Due Date:\\s${datePattern}|Payment Status:\\s?(${statusPattern})|Contact Number:\\s${numberPattern}`,
-  "g"
+  "g",
 );
 
-const matches = [...billData.matchAll(regexNameSol)].map((match) => match[0]);
+const matches = [...billData.matchAll(regexNameSol)].map(match => match[0]);
 
 console.log(matches);
 
