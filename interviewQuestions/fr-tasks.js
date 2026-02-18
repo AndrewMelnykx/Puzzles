@@ -169,9 +169,9 @@
 // Uncontrolled = components where the DOM manages the state, accessed via refs (e.g., <input ref={...} />).
 
 // 27) Which libraries do you use with react forms?
-// I used zod with next js , and react form hook
+// I used zod with next js , and react form hook  , tanstack , im familiar with formik
 
-// 28) And in which cases you can use one or anotehr (about controlled and uncontrolled components)?
+// 28) And in which cases you can use one or another (about controlled and uncontrolled components)?
 // Controlled Components: Used when you need to track and manage the input value, or handle user interactions.
 // Example: A search input where you want to track what the user types, validate it, and respond
 // to changes instantly (e.g., filtering search results).
