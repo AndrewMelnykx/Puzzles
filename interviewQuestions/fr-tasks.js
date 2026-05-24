@@ -121,6 +121,8 @@
 //Structural pattern : Facade, Adapter
 //Behavioral:Strategy,Observer
 
+//“In frontend, I mostly use Factory for dynamic component creation, Strategy for interchangeable behaviors, Observer in state management/events, Facade for simplifying services, and Adapter when integrating APIs. Singleton is common for shared services like API clients or stores, and Builder helps when constructing complex configs or objects.”
+
 // Example creational:
 // SINGLETONE is axios instance and next reuse it for child requests
 //   BUILDER  when we use class to create a building template like request below
